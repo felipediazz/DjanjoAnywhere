@@ -1,7 +1,11 @@
-from .views import home
 from django.urls import path
+from . import views
+from .views import index, process_image
 
 
 urlpatterns = [
-    path('', home,name="home")
+    path('', index, name='index'),
+    path('process_image/', process_image, name='process_image'),
 ]
+
+

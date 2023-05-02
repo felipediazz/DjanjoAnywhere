@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Resultado del procesamiento de imagen</h1>
+<table>
+  <thead>
+    <tr>
+      {% for column in result.columns %}
+      <th>{{ column }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in result.values %}
+    <tr>
+      {% for value in row %}
+      <td>{{ value }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
